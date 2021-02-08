@@ -15,3 +15,13 @@ compute_mean <- function(column_name,
 
   return(out)
 }
+
+plot_data <- function(path) {
+  df <- get_data(path)
+  png("plot.png")
+  out <- ggplot2::ggplot(df, ggplot2::aes(x = df[["welfare"]])) +
+    ggplot2::geom_histogram()
+  print(out)
+  dev.off()
+}
+
