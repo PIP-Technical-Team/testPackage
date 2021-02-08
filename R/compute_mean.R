@@ -16,6 +16,14 @@ compute_mean <- function(column_name,
   return(out)
 }
 
+#' Returns a histogram
+#'
+#' @param path character: Path to microdata file
+#'
+#' @return png
+#' @export
+#'
+
 plot_data <- function(path) {
   df <- get_data(path)
   png("plot.png")
