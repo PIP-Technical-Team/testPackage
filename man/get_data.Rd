@@ -4,10 +4,12 @@
 \alias{get_data}
 \title{Helper function to load data into memory}
 \usage{
-get_data(path)
+get_data(path, filetype = c("rds", "fst", "qs", "parquet"))
 }
 \arguments{
 \item{path}{character: Path to .parquet file}
+
+\item{filetype}{character: filetype to be read}
 }
 \value{
 data.frame

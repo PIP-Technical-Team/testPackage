@@ -4,13 +4,15 @@
 \alias{compute_mean}
 \title{Compute the mean of the column in a data.frame}
 \usage{
-compute_mean(column_name, path)
+compute_mean(column_name, path, filetype = c("rds", "fst", "qs", "parquet"))
 }
 \arguments{
 \item{column_name}{character: Column name for which the mean is to be
 computed}
 
 \item{path}{character: Path to the data file}
+
+\item{filetype}{character: filetype to be read}
 }
 \value{
 numeric

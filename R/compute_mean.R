@@ -3,14 +3,18 @@
 #' @param column_name character: Column name for which the mean is to be
 #' computed
 #' @param path character: Path to the data file
-#'
+#' @param filetype character: filetype to be read
 #' @return numeric
 #' @export
 #'
 compute_mean <- function(column_name,
-                         path) {
+                         path,
+                         filetype = c("rds",
+                                      "fst",
+                                      "qs",
+                                      "parquet")) {
 
-  df <- get_data(path)
+  df <- get_data(path, filetype = filetype)
   out <- mean(df[[column_name]], na.rm = TRUE)
 
   return(out)
@@ -32,4 +36,3 @@ plot_data <- function(path) {
   print(out)
   dev.off()
 }
-
