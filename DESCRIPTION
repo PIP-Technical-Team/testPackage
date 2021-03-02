@@ -16,7 +16,9 @@ Imports:
     svglite,
     jsonlite,
     fst,
-    qs
+    qs,
+    fs,
+    wbpip
 RoxygenNote: 7.1.1
 URL: https://github.com/PIP-Technical-Team/testPackage
 BugReports: https://github.com/PIP-Technical-Team/testPackage/issues
